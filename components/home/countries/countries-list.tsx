@@ -7,10 +7,10 @@ import { useEffect } from "react";
 import Link from "next/link";
 
 const CountriesList = () => {
-  const { countries, countryFilter } = useAppSelector((state) => ({
-    countries: state.countries.countries,
-    countryFilter: state.countries.countryFilter,
-  }));
+  const countries = useAppSelector((state) => state.countries.countries);
+  const countryFilter = useAppSelector(
+    (state) => state.countries.countryFilter
+  );
 
   const dispatch = useDispatch<AppDispatch>();
 

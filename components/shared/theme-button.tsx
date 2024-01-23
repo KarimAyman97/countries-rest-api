@@ -17,20 +17,10 @@ const ThemeButton = () => {
   };
   return (
     mounted && (
-      <>
-        {theme === "dark" && (
-          <button onClick={ToggleTheme} className="flex">
-            <HiSun className="my-1 mx-2" />
-            Light Mode
-          </button>
-        )}
-        {theme === "light" && (
-          <button onClick={ToggleTheme} className="flex">
-            <HiMoon className="my-1 mx-2" />
-            Dark Mode
-          </button>
-        )}
-      </>
+      <button onClick={ToggleTheme} className="flex">
+        <HiMoon className="my-1 mx-2" />
+        Dark Mode
+      </button>
     )
   );
 };
